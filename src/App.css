@@ -18,6 +18,13 @@
   filter: drop-shadow(0 0 2em #61dafbaa);
 }
 
+.pokemonCard {
+background-color: greenyellow;
+color : white;
+font-size: 2.5rem ;
+font-weight: 600;
+} 
+
 @keyframes logo-spin {
   from {
     transform: rotate(0deg);
