@@ -43,13 +43,13 @@ function App() {
       setPokemonIndex (pokemonIndex => pokemonIndex + 1);
     }
 
-  return (
-    <div>
-      <PokemonCard name ={pokemonList[pokemonIndex].name} imgSrc = {pokemonList[pokemonIndex].imgSrc}/>
-      <button onClick={handleClick}>Précédent</button>
-      <button onClick={handleClick2}>Suivant</button>
-    </div>
-  );
+    return (
+      <div>
+        <PokemonCard name ={pokemonList[pokemonIndex].name} imgSrc = {pokemonList[pokemonIndex].imgSrc}/>
+        {pokemonIndex > 0 ? <button className= "button" onClick={handleClick}>Précédent</button> : null}
+        {pokemonIndex < pokemonList.length - 1 ? <button className= "button" onClick={handleClick2}>Suivant</button> : null}
+      </div>
+    );
 }
 
 export default App
