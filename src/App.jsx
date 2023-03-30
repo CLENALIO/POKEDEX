@@ -3,6 +3,7 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 import PokemonCard from "./components/PokemonCard.jsx"
+import NavBar from "./components/NavBar.jsx"
 
 function App() {
   const pokemonList = [
@@ -53,4 +54,5 @@ function App() {
 }
 
 export default App
+
 
