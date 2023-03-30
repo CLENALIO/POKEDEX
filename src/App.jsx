@@ -34,25 +34,13 @@ function App() {
 
     const [pokemonIndex, setPokemonIndex] = useState(0);
 
-    const handleClick = function (e) {
-      e.preventDefault()
-      setPokemonIndex (pokemonIndex => pokemonIndex - 1);
-    }
-
-    const handleClick2 = function (e) {
-      e.preventDefault()
-      setPokemonIndex (pokemonIndex => pokemonIndex + 1);
-    }
-
     return (
       <div>
         <PokemonCard name ={pokemonList[pokemonIndex].name} imgSrc = {pokemonList[pokemonIndex].imgSrc}/>
-        {pokemonIndex > 0 ? <button className= "button" onClick={handleClick}>Précédent</button> : null}
-        {pokemonIndex < pokemonList.length - 1 ? <button className= "button" onClick={handleClick2}>Suivant</button> : null}
+        <NavBar setPokemonIndex ={setPokemonIndex} pokemonIndex= {pokemonIndex}/>
       </div>
     );
 }
 
-export default App
-
+export default App;
 
