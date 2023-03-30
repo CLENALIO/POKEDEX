@@ -4,6 +4,7 @@ import viteLogo from '/vite.svg'
 import './App.css'
 import PokemonCard from "./components/PokemonCard.jsx"
 import NavBar from "./components/NavBar.jsx"
+import { useEffect } from "react";
 
 function App() {
   const pokemonList = [
@@ -34,10 +35,24 @@ function App() {
 
     const [pokemonIndex, setPokemonIndex] = useState(0);
 
+    useEffect( 
+      () => {
+      alert("hello pokemon trainer :)")
+    },
+    []
+  );
+
+  useEffect(() => {
+    if (pokemonIndex === 3) {
+  alert("pika pikachu !!!")
+    }
+  },
+);
+
     return (
       <div>
         <PokemonCard name ={pokemonList[pokemonIndex].name} imgSrc = {pokemonList[pokemonIndex].imgSrc}/>
-        <NavBar setPokemonIndex ={setPokemonIndex} pokemonIndex= {pokemonIndex}/>
+        <NavBar setPokemonIndex ={setPokemonIndex}/>
       </div>
     );
 }
